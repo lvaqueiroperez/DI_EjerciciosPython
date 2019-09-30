@@ -1,3 +1,4 @@
+#Ejercicios de moodle
 #7.6.1
 
 tupla1 = (4,7,2,9,11,13,20)
