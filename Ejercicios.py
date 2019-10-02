@@ -107,4 +107,18 @@ def campanhaElectoral (nombres):
 
 campanhaElectoral(("Juan",'M'), ("Pepe","M"), ("Maria","F"))
 
+
+
 #7.6.5 ACABAR
+
+
+
+
+
+
+
+
+
+
+
+
