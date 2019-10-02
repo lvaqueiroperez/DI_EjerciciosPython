@@ -1,4 +1,4 @@
-#Ejercicios de moodle
+#Ejercicios del fichero de moodle "Exercicios de Python"
 #7.6.1
 
 tupla1 = (4,7,2,9,11,13,20)
@@ -105,12 +105,42 @@ def campanhaElectoral (nombres):
             print("Estimado" + elemento[0])
 
 
-campanhaElectoral(("Juan",'M'), ("Pepe","M"), ("Maria","F"))
+#campanhaElectoral(("Juan",'M'), ("Pepe","M"), ("Maria","F"))
 
 
 
 #7.6.5 ACABAR
 
+
+
+#9.5.1
+#LISTA de tuplas a Diccionario
+#Las tuplas de la lista solo podrán tener 2 elementos, lo que será la clave y el valor de cada elemento del diccionario
+
+#Para poner varios valores en una misma clave, creamos una lista la lista como Valor
+tuplasAlmacen = [("1","Clavo"),("2","Tuerca"),("1","Tornillo"),("3","Tenazas")]
+
+def tuplasADiccionario(lista):
+
+        diccionario = dict()
+        listaValoresTemporal = list()
+        listaValores2 = list()
+
+        for tupla in lista:
+
+            for tupla2 in lista:
+
+                if tupla[0] == tupla2[0]:
+                    #siempre almacena el primer valor independientemente de que se repita o no
+                    listaValoresTemporal.extend(tupla2[0])
+
+            listaValores2.extend(listaValoresTemporal)
+            listaValoresTemporal.clear()
+            diccionario[tupla] = listaValores2
+
+        return diccionario
+
+print(tuplasADiccionario(tuplasAlmacen))
 
 
 
