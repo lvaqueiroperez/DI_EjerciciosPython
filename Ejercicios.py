@@ -1,7 +1,7 @@
 #Ejercicios del fichero de moodle "Exercicios de Python"
 #7.6.1
-
-tupla1 = (4,7,2,9,11,13,20)
+print("7.6.1")
+tupla1 = (4,5,6,3,11,13,20)
 tupla2 = (2,3,4,5,6,7,8,9)
 
 
@@ -28,7 +28,7 @@ def comprobarOrden(tupla):
     else:
          print("no ordenado")
 
-comprobarOrden(tupla2)
+comprobarOrden(tupla1)
 
 
 
@@ -81,7 +81,7 @@ print(nombresOrdenados(listaTuplas))
 
 
 #7.6.3.1
-
+print("7.6.3.1")
 def campanhaElectoral (nombres):
     for nombre in nombres:
         print("Estimado" + nombre)
@@ -89,27 +89,63 @@ def campanhaElectoral (nombres):
 campanhaElectoral(("Juan", "Pepe", "Pedro"))
 
 #7.6.3.2
+print("7.6.3.2")
 
 def campanhaElectoral (nombres, origen, num):
+    #debemos utilizar el "slicing"
     for nombre in nombres[origen:num+1]:
         print("Estimado" + nombre)
 
 campanhaElectoral(("Juan", "Pepe", "Pedro"),0,1)
 
 
-#7.6.3.3 ACABAR
-
+#7.6.3.3
+print("7.6.3.3")
 def campanhaElectoral (nombres):
     for elemento in nombres:
         if elemento[1] == 'M':
-            print("Estimado" + elemento[0])
+            print("Estimado " + elemento[0])
+        elif elemento[1] == 'F':
+            print("Estimada " + elemento[0])
 
 
-#campanhaElectoral(("Juan",'M'), ("Pepe","M"), ("Maria","F"))
+campanhaElectoral((("Juan",'M'), ("Pepe","M"), ("Maria","F")))
 
 
+#7.6.5.1
+print("7.6.5.1")
 
-#7.6.5 ACABAR
+listaNum = [1,44,6,2,8,11, 13, 7, 23]
+
+def listaPrimos(lista):
+
+    cont = 1;
+    primos = list();
+    contNum = 0
+
+    for elemento in lista:
+        while cont < 10:
+            if elemento % cont == 0:
+
+                cont = cont +1
+                contNum = contNum + 1
+            else:
+                cont = cont + 1
+
+
+        if contNum <= 2 and elemento != 2:
+            primos.append(elemento)
+            cont = 1
+            contNum = 0
+
+        else:
+            cont = 1
+            contNum = 0
+
+    print(primos)
+
+listaPrimos(listaNum)
+
 
 
 
