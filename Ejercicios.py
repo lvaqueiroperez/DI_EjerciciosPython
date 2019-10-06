@@ -119,6 +119,7 @@ def campanhaElectoral (nombres):
 #Las tuplas de la lista solo podrán tener 2 elementos, lo que será la clave y el valor de cada elemento del diccionario
 
 #Para poner varios valores en una misma clave, creamos una lista la lista como Valor
+print("9.5.1")
 tuplasAlmacen = [("1","Clavo"),("2","Tuerca"),("1","Tornillo"),("3","Tenazas")]
 
 def tuplasADiccionario(listaT):
@@ -127,11 +128,13 @@ def tuplasADiccionario(listaT):
 
         for tupla in listaT:
             if tupla[0] in diccionario:
-                #Si el valor existe en el diccionario, haremos una lista y utilizaremos "append" para añadirle un elemento
+                #Si el valor existe en el diccionario, haremos una lista y utilizaremos "append" para AÑADIRLE un elemento
                 #Aquí tenemos que ASUMIR que esa lista ya existe
+                #AGREGAR VALORES A UNA CLAVE EN UN DICCIONARIO:
                 diccionario[tupla[0]].append(tupla[1])
             else:
                 #Todos los valores serán una lista, que creamos aquí
+                #Creamos la lista cada vez que se inicia el bucle para limpiarla de los valores anteriores !!!
                 lista2 = list()
                 lista2.append(tupla[1])
                 diccionario[tupla[0]] = lista2
@@ -141,11 +144,15 @@ def tuplasADiccionario(listaT):
 print(tuplasADiccionario(tuplasAlmacen))
 
 
-#9.5.2 !!!
+#9.5.2.1 !!!
 #Podemos pasar un String a Mayus o Minus con "upper" y "lower" para evitar diferenciación de mayus y minus
-cad = "Qué lindo día que hace hoy"
+print("9.5.2.1")
+#CÓMO QUITAR TILDES DE UNA STRING??
+cad = "Que lindo dia que hace hoy"
 
 def contarPalabras(cadena):
+
+
 
     diccionario2 = dict()
     listaPalabras = cadena.split(" ")
@@ -162,7 +169,9 @@ def contarPalabras(cadena):
 
     return diccionario2
 
-print(contarPalabras(cad))
+#En la llamada a la función podemos hacer que la string sea toda en mayus o en minus para más precisión
+print(contarPalabras(cad.upper()))
+
 
 #9.5.2.2
 """Escribir una función que cuente la cantidad de apariciones de cada carácter en una
@@ -172,7 +181,7 @@ cad2 = "Esto es una cadena de texto"
 
 #EN PYTHON, LOS STRING CUENTAN COMO COLECCIÓN, SE PUEDEN RECORRER COMO SI FUERAN UNA ESPECIE DE "LISTA DE CARACTERES"
 #Entonces, cogiendo el ejercicio anterior, solo borrando el "listaPalabras = cadena.split(" ")" ya iría
-
+#SI METEMOS UNA CADENA EN UNA LISTA, CADA ELEMENTO DE LA LISTA SERÁ UN CARACTER DE LA CADENA, INCLUYENDO LOS ESPACIOS
 def contarCaracteres(cadena):
 
     diccionario2 = dict()
