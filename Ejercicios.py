@@ -239,7 +239,22 @@ print(contarCaracteres(cad2))
 
 
 
+"""Función que pase lista de temperaturas en Farenhait a Celsius,devolviendo otra lista"""
+"""tiene que usar map con lambdas"""
+"""y otra versión con solamente los corchetes []"""
 
+listaFaren = [13,40,60,75]
+
+print("forma 1")
+listaCels = map(lambda temp : (temp -32)/1.8 ,listaFaren)
+for elemento in listaCels:
+    print(elemento)
+#Para que aparezca como lista: ?
+#podemos hacerlo con append
+
+print("forma2")
+listaCels2 = [(temp -32)/1.8 for temp in listaFaren]
+print(listaCels2)
 
 
 
