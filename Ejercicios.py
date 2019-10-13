@@ -242,6 +242,7 @@ print(contarCaracteres(cad2))
 """Función que pase lista de temperaturas en Farenhait a Celsius,devolviendo otra lista"""
 """tiene que usar map con lambdas"""
 """y otra versión con solamente los corchetes []"""
+print("Ejercicio pasar Farenheit a Celsius:")
 
 listaFaren = [13,40,60,75]
 
